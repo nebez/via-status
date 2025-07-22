@@ -1,0 +1,23 @@
+{
+  "manifest_version": 3,
+  "name": "VIA Rail TransitDocs Linker",
+  "version": "1.0",
+  "description": "Injects a button into VIA Rail trip summaries to link to TransitDocs with extracted date and train number.",
+  "host_permissions": ["https://www.viarail.ca/*"],
+  "content_scripts": [
+    {
+      "matches": ["https://www.viarail.ca/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "action": {
+    "default_title": "TransitDocs Linker"
+  },
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  }
+}
+
