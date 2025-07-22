@@ -48,11 +48,11 @@ function injectButton(segment) {
   button.textContent = 'View on TransitDocs';
   button.style = `
     margin-top: 10px;
-    padding: 6px 12px;
+    padding: 6px 0;
     background-color: #0072ce;
+    width: 100%;
     color: white;
     border: none;
-    border-radius: 4px;
     cursor: pointer;
     font-weight: bold;
   `;
@@ -92,4 +92,3 @@ observer.observe(document.body, { childList: true, subtree: true });
 
 // Initial run
 document.querySelectorAll(SELECTORS.join(',')).forEach(injectButton);
-
